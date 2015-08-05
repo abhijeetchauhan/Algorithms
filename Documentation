@@ -1,0 +1,12 @@
+DocumentToBaseN(int decimalno,int base into which conversion is to be made)
+return int* 
+where the first int in the pointer gives the length and rest the output.
+
+
+DocumentToBaseNr(int decimalno,int base into which conversion is to be made)
+return int* 
+where the first int in the pointer gives the length and rest the output in reverse order.
+
+ModExpo(int base,int power(decimal),int divisor)
+return int
+returns the remainder
