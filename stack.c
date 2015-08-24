@@ -9,7 +9,7 @@ void main(){
     printf("Enter Operation to be done\n1.Push\n2.Pop\n");
     scanf("%d",&ch);
     switch(ch){
-      case 1:  printf("Enter value\n");
+      case 1:  printf("Enter value: ");
                scanf("%d",&value);
                push(p,topp,value);
                break;
@@ -18,15 +18,16 @@ void main(){
       default:  printf("invalid input\n");
 
     }
-    printf("Enter zero to stop or one to perform another Operation");
+    printf("Enter one to perform another Operation: ");
     scanf("%d",&flag);
   }
   for(i=0;i<=top;i++){
     printf("%d",p[i]);
   }
+  printf("\n");
 }
 void push(int p[],int *topp,int item){
-  if(*topp>=2)
+  if(*topp>=9)
     printf("Overflow\n");
   else{
   *topp=*topp+1;

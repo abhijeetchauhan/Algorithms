@@ -5,27 +5,27 @@ void delete(int *p,int size,int insert,int loc);
 void travel(int *p,int size);
 void main(){
   int size,p[100],insert,loc,i,ch,flag=1;
-  printf("Enter the size of the array\n"); 
+  printf("Enter the size of the array: "); 
   scanf("%d",&size);
-  printf("Enter array\n");
+  printf("Enter array: ");
   for(i=0;i<size;i++){
     scanf("%d",&p[i]);
   }
-  printf("entered array is \n");
-    for(i=0;i<size;i++){
-    printf("%d",p[i]);
-  }
+  // printf("entered array is \n");
+  //   for(i=0;i<size;i++){
+  //   printf("%d",p[i]);
+  // }
   printf("\n");
   while(flag==1){
     printf("Enter Operation to be done\n1.Insertion\n2.Deleltion\n3.Traversing\n");
     scanf("%d",&ch);
     switch(ch){
-      case 1:  printf("Enter value and location\n");
+      case 1:  printf("Enter value and location: ");
                scanf("%d%d",&insert,&loc);
                add(p,size,insert,loc);
                size++;
                break;
-      case 2:   printf("Enter value and location\n");
+      case 2:   printf("Enter value and location: ");
                 scanf("%d%d",&insert,&loc);
                 delete(p,size,insert,loc);
                 size--;
@@ -35,7 +35,7 @@ void main(){
       default:  printf("invalid input\n");
 
     }
-    printf("Enter zero to stop or one to perform another Operation");
+    printf("Enter zero to stop or one to perform another Operation: ");
     scanf("%d",&flag);
   }
 }
