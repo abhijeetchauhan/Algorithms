@@ -34,6 +34,13 @@ Node *searchBST(Node **root,int targetkey){
     return *root;
   }
 }
+void Preorder(node *root) {
+    if(root!=NULL){
+        printf("%d ",root->data);
+        Preorder(root->left);
+        Preorder(root->right);
+    }
+}
 void addBST(Node **root,int no){
   if((*root)==NULL){
     Node *add;

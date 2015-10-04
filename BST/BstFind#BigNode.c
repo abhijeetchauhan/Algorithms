@@ -4,7 +4,8 @@
 struct node
 {
   struct node *left,*right;
-  unsigned long long int data;
+  char next;
+  unsigned long long int data,count;
 };
 typedef struct node Node;
 unsigned long long int countBST(Node **root,unsigned long long int targetkey){
@@ -25,6 +26,7 @@ void addBST(Node **root,unsigned long long int no){
     add->left=NULL;
     add->right=NULL;
     add->data=no;
+    add->count=1;
     *root=add;
     return;
   }
@@ -32,10 +34,36 @@ void addBST(Node **root,unsigned long long int no){
     addBST(&(*root)->left,no);
     return;
   }
-  else{
+  else if(((*root)->data)<no){
     addBST(&(*root)->right,no);
     return;
   } 
+  else{
+    if((*root)->right==NULL && (*root)->left)==NULL)){
+      (*root)->count=(*root)->count+1;
+      return;
+    }
+    else if((*root)->right==NULL){
+      (*root)->next="l"
+      addBST(&(*root)->left,no);
+      return;
+    }
+    else if((*root)->left)==NULL){
+      (*root)->next="r";
+      addBST(&(*root)->right,no);
+      return;
+    }
+    else{
+      if((*root)->next="r"){
+        addBST(&(*root)->right,no);
+        return;
+      }
+      else{
+        addBST(&(*root)->left,no);
+        return;
+      }
+    }
+  }
 }
 void main(){
   unsigned long long int no;
