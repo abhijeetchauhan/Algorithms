@@ -1,11 +1,12 @@
 #include <stdio.h>
-void merging(int *a,int l,int m,int r){
-    int i, j, k;
-    int n1 = m - l + 1;
-    int n2 =  r - m;
+
+void merging(long long int *a,long long int l,long long int m,long long int r){
+    long long int i, j, k;
+    long long int n1 = m - l + 1;
+    long long int n2 =  r - m;
 
     /* create temp arrays */
-    int L[n1], R[n2];
+    long long int L[n1], R[n2];
 
     /* Copy data to temp arrays L[] and R[] */
     for(i = 0; i < n1; i++)
@@ -40,25 +41,25 @@ void merging(int *a,int l,int m,int r){
       }
     }
 }
-void mergeSort(int *arr, int l, int r)
+void mergeSort(long long int *arr, long long int l, long long int r)
 {
     if (l < r)
     {
-        int m = l+(r-l)/2,i; //Same as (l+r)/2, but avoids overflow for large l and h
-        printf("%d-%d-%d\n",l,m,r);
+        long long int m = l+(r-l)/2; //Same as (l+r)/2, but avoids overflow for large l and h
+        //printf("%d-%d-%d\n",l,m,r);
         mergeSort(arr, l, m);
-        printf("I am at second call\n");
+        //printf("I am at second call\n");
         mergeSort(arr, m+1, r);
-        printf("I am at third call\n");
+        //printf("I am at third call\n");
         merging(arr, l, m, r);
-        for(i=l;i<=r;i++){
-          printf("%d ",arr[i]);
-        }
-        printf("\n");
+        //for(i=l;i<=r;i++){
+        //  printf("%d ",arr[i]);
+        //}
+        //printf("\n");
     }
 }
 void main(){
-  int a[100],size,i;
+  long long int a[100],size,i;
   printf("Enter size: ");
   scanf("%d",&size);
   for(i=0;i<size;i++){
