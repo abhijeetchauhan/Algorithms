@@ -1,3 +1,12 @@
+// Completion Problem
+
+// STATEMENT:You have no of jobs to do.Now you want to know which should i do first.
+// So depending on the time taken by the job and it's priority we will schedule the job.
+// We would basically find the permutation in which the cost(weighted average of completion time) is minimum.
+
+// INPUT:Name , Priority , Weight
+// OUTPUT:Permutation of jobs to be done with there name and completion time
+
 #include <bits/stdc++.h>
 #define ll double
 using namespace std;
