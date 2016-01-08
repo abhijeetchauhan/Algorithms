@@ -27,6 +27,7 @@ int main() {
   sort(begin(jobs), end(jobs), [](auto const &t1, auto const &t2) {
         return get<3>(t1) > get<3>(t2); // or use a custom compare function
   });
+  
   tim=0;
   for(ll i=0;i<size;i++){
     cout << i+1 << ":" << get<0>(jobs[i]);
