@@ -21,11 +21,16 @@ class test{
 class UserDefException{
   public static void main(String []g){
     test t = new test(4);
-    try{
-      t.valid();
-    }
-    catch(MyException e){
-      System.out.println(e);
-    }
+    //try{
+    throw new NullPointerException();
+    //t.valid();
+    //}
+    // catch(MyException e){
+    //   System.out.println(e);
+    // }
+    // finally{
+    //   System.out.println("finally called");
+    // }
+    // System.out.println("Outside finally");
   }
 }
